@@ -50,10 +50,12 @@ getValueInput()
 
 form.addEventListener('submit', (event)=>{
     event.preventDefault()
-    console.log(email.value);
-    console.log(message.value);
-    // localStorage.clear()
     localStorage.removeItem(KEY)
+    const formObj = {'email': `${email.value}`, 'message': `${message.value}`}
+    console.log(formObj);
+    // console.log(email.value);
+    // console.log(message.value);
     email.value = ''
     message.value = ''
 })
+
